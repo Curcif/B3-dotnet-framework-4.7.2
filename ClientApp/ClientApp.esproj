@@ -18,4 +18,8 @@
   <ItemGroup>
     <None Remove=".vscode/launch.json" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include=".vscode\extensions.json" />
+    <None Include=".vscode\tasks.json" />
+  </ItemGroup>
 </Project>
