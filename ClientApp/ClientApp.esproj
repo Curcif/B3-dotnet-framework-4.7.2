@@ -10,6 +10,13 @@
     <BuildOutputFolder>$(MSBuildProjectDirectory)\dist\ClientApp</BuildOutputFolder>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove=".vscode/launch.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".vscode\extensions.json" />
+    <None Include=".vscode\tasks.json" />
+  </ItemGroup>
+  <ItemGroup>
     <TypeScriptConfiguration Remove=".vscode\**" />
   </ItemGroup>
   <ItemGroup>
