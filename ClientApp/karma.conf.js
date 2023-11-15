@@ -1,4 +1,4 @@
-﻿module.exports = function (config) {
+module.exports = function (config) {
   config.set({
     basePath: '',
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
@@ -38,7 +38,11 @@
     singleRun: false,
     restartOnFileChange: true,
     listenAddress: 'localhost',
-    hostname: 'localhost'
+    hostname: 'localhost',
+    files: [
+      { pattern: './node_modules/jquery/dist/jquery.min.js', watched: false },
+      { pattern: './src/test.ts', watched: false }
+    ]
   });
 };
 

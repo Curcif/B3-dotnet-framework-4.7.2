@@ -15,7 +15,6 @@ namespace B3.Controllers
     [RoutePrefix("Investimento")]
     public class InvestimentoController : ApiController
     {
-  
         private readonly IInvestimentoServices _investimentoServices;
 
         public InvestimentoController(IInvestimentoServices investimentoServices)

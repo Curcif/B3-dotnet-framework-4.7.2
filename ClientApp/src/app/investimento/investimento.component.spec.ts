@@ -3,6 +3,7 @@ import { InvestimentoComponent } from './investimento.component';
 import { By } from '@angular/platform-browser';
 import { ApiHttpService } from '../core/services/api-http';
 import { HttpClient, HttpHandler } from '@angular/common/http';
+import { NumericDirective } from '../helpers/numeric.directive';
 
 describe('InvestimentoComponent', () => {
   let component: InvestimentoComponent;
@@ -13,7 +14,8 @@ describe('InvestimentoComponent', () => {
       declarations: [InvestimentoComponent],
       providers: [{ provide: ApiHttpService },
       { provide: HttpClient },
-      { provide: HttpHandler }
+      { provide: HttpHandler },
+      { provide: NumericDirective }
       ]
     })
       .compileComponents();
