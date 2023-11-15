@@ -1,9 +1,14 @@
-﻿
+﻿using B3.Controllers;
+using B3.Interfaces;
+using B3.Services;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Web.Http;
 using System.Web.Http.Cors;
+using Unity;
 
 namespace B3
 {
@@ -11,11 +16,7 @@ namespace B3
     {
         public static void Register(HttpConfiguration config)
         {
-            EnableCorsAttribute cors = new EnableCorsAttribute("*", "*", "*");
-            config.EnableCors(cors);
-
-            // Web API configuration and services
-
+            UnityConfig.RegisterComponents();
             // Web API routes
             config.MapHttpAttributeRoutes();
 
@@ -24,6 +25,8 @@ namespace B3
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+
         }
     }
 }

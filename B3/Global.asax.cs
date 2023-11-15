@@ -9,6 +9,7 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Unity;
 
 namespace B3
 {
@@ -16,13 +17,7 @@ namespace B3
     {
         protected void Application_Start()
         {
-            AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
-            RouteConfig.RegisterRoutes(RouteTable.Routes);
-
-            var services = new ServiceCollection();
-
-            services.AddScoped<IInvestimentoServices, InvestimentoServices>();
         }
     }
 }

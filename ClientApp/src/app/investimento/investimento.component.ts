@@ -26,15 +26,12 @@ export class InvestimentoComponent implements OnInit {
     this.ValorAplicado = $(".money").val();
   }
 
-  CalcularInvestimento() {
+  async CalcularInvestimento() : Promise<void> {
     let valoresArr: string[] = [this.ValorAplicado, this.QtdMesesInvestidos];
     let dadosInvestimento = { "ValorAplicado": this.ValorAplicado, "QtdMesesInvestidos": this.QtdMesesInvestidos };
 
     if (this.ValidarCampos(valoresArr)) {
-      this.service.CalcularRendimento("https://localhost:44309/Investimento/CalcularInvestimento", dadosInvestimento).subscribe(result => {
-        this.investimentosCalculados = result;
-        console.log(this.investimentosCalculados);0
-      });
+      this.investimentosCalculados = await this.service.CalcularRendimento("https://localhost:44309/Investimento/CalcularInvestimento", dadosInvestimento).toPromise();
 
     }
   };
