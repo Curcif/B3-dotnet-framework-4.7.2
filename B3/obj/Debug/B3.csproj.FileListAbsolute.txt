@@ -360,3 +360,8 @@ C:\Users\cave2\source\repos\B3-dotnet-framework-4.7.2\B3\bin\Unity.Container.dll
 C:\Users\cave2\source\repos\B3-dotnet-framework-4.7.2\B3\bin\Unity.Abstractions.pdb
 C:\Users\cave2\source\repos\B3-dotnet-framework-4.7.2\B3\bin\Unity.Container.pdb
 C:\Users\cave2\source\repos\B3-dotnet-framework-4.7.2\B3\bin\Unity.WebApi.dll
+C:\VSTS\B3-dotnet-framework-4.7.2\B3\bin\Unity.Abstractions.dll
+C:\VSTS\B3-dotnet-framework-4.7.2\B3\bin\Unity.Container.dll
+C:\VSTS\B3-dotnet-framework-4.7.2\B3\bin\Unity.WebApi.dll
+C:\VSTS\B3-dotnet-framework-4.7.2\B3\bin\Unity.Abstractions.pdb
+C:\VSTS\B3-dotnet-framework-4.7.2\B3\bin\Unity.Container.pdb
