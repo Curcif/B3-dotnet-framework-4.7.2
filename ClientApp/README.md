@@ -5,6 +5,7 @@ Este Projeto foi inicialmente construido com a versão 12.0.2 do Angular CLI, e 
 ## Ambiente de Desenvolvimento
 
 Antes de testar, certifique-se de possuir o NodeJS (nodejs.org) devidamente instalado.
+Pode ser necessário rodar o comando "npm install" no diretório raiz da aplicação Angular (/ClientApp).
 
 ***IMPORTANTE***
 Para que o projeto rode corretamente, é necessário configurar para que o projeto em Angular e o projeto em .NET Framework 4.7.2 iniciem juntos.
