@@ -19,7 +19,6 @@ Para rodar os testes unitários do Angular, por favor rode o comando "ng test", 
 
 ## Estruturas desenvolvidas
 Considerando que o teste será realizado utilizando a IDE Visual Studio/PRO/Enterprise/Community, basta pressionar "F5" ou clicar no "PLAY" da IDE para que a aplicação seja iniciada.
-Para injeção de dependencia, foi utilizada a LIB "Unity";
 No primeiro momento, aparecerá uma tela de "Loading" que redicionará a aplicação para o sistema de rotas do AngularCLI. Neste ponto, basta esperar até que a aplicação carregue completamente.
 
 A interface carregada contempla dois inputs e dois botões:
@@ -40,8 +39,15 @@ O resultado final esperado é devolver à tela para que o usuário visualize as 
 
  ## Informações Relevantes
 
- Devido às aplicações AngularCLI e .NET CORE estarem dentro da mesma solução, foi necessário fazer uma configuração no CORS para que o domínio "http://localhost:44438/" se comunique corretamente com "http://localhost:7009/".
+ Para injeção de dependencia, foi utilizada a Library "Unity";
+ IMPORTANTE ** O primeiro calculo realizado na aplicação, tende a demorar alguns segundos. Os demais cálculos são imediatos. **
+
+ Devido às aplicações AngularCLI e .NET CORE estarem dentro da mesma solução, foi necessário fazer uma configuração no CORS para que o domínio "http://localhost:4200/" se comunique corretamente com "http://localhost:44309/".
  Por ser uma aplicação de teste, o quesito segurança não está sendo coniderado neste desenvolvimento inicial: o CORS aceita qualquer requisição (independente da origem), desde que respeite os critérios da validação.
  
  Para auxiliar no desenvolvimento, foi desenvolvido um diretório 'helper' (aplicação angular) que contempla métodos que poderão ser compartilhados por toda a aplicação front-end
  O sistema busca respeitar os conceitos do Pattern SOLID, portanto há segmentação para o conceito de responsabilidade unica, reaproveitamento de código, ajustes de inejção de dependencia (config: program.cs) e inversão de controle (para promover desacoplamentos) com uso de interfaces.
+
+ ** TESTES ** Embora os testes unitários do Angular apareçam na aplicação de Teste NUNIT, eles devem ser feitos pelo comando "NG TEST", pois:
+ 1. Se a aplicação NÃO ESTIVER rodando, o Angular não conseguirá processar estes testes.
+ 2. Se a aplicação ESTIVER rodando, não será possível rodar os testes ANGULAR nesta aplicação de teste (NUNIT)
