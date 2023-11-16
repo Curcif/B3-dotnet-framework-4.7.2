@@ -5,6 +5,12 @@ Este Projeto foi inicialmente construido com a versão 12.0.2 do Angular CLI, e 
 ## Ambiente de Desenvolvimento
 
 Antes de testar, certifique-se de possuir o NodeJS (nodejs.org) devidamente instalado.
+
+***IMPORTANTE***
+Para que o projeto rode corretamente, é necessário configurar para que o projeto em Angular e o projeto em .NET Framework 4.7.2 iniciem juntos.
+Para isso, basta clicar com o botão direito na "Solution 'ClientApp'" > Properties > Startup Project > Marque a opção "Multiple startup projects" e em seguida, selecione a opção "Start" na coluna "Action" para os projetos "B3" e "ClientApp"
+*A falta desta configuração acarretará no não-funcionamento da aplicação.
+
 Este software foi desenvolvido utilizando a IDE Visual Studio Enterprise. Recomenda-se utilizar a mesma IDE ou equivalente para maior chance de sucesso nos testes.
 A porta utilizada para o ambiente AngularCLI é "http://localhost:4200/", enquanto para chamadas REST (.NET CORE), utiliza-se o "https://localhost:44309/"
 Também é possível testar, servindo-se do comando `ng serve` no propósito de testes em um ambiente DEV.
